@@ -7,7 +7,7 @@ class MessageController {
       const messages = await Message.findAll();
       res.status(200).json(messages);
     } catch (error) {
-      res.status(500).json({ message: 'Error al obtener los mensajes', error });
+      res.status(500).json({ message: 'Error while getting messages', error });
     }
   }
 
@@ -19,10 +19,10 @@ class MessageController {
       if (message) {
         res.status(200).json(message);
       } else {
-        res.status(404).json({ message: 'Mensaje no encontrado' });
+        res.status(404).json({ message: 'Message not found' });
       }
     } catch (error) {
-      res.status(500).json({ message: 'Error al obtener el mensaje', error });
+      res.status(500).json({ message: 'Error while getting message', error });
     }
   }
 
@@ -32,7 +32,7 @@ class MessageController {
       const newMessage = await Message.create({ content, timestamp });
       res.status(201).json(newMessage);
     } catch (error) {
-      res.status(500).json({ message: 'Error al crear el mensaje', error });
+      res.status(500).json({ message: 'Error while creating message', error });
     }
   }
 
@@ -47,10 +47,10 @@ class MessageController {
         await message.update({ content, timestamp });
         res.status(200).json(message);
       } else {
-        res.status(404).json({ message: 'Mensaje no encontrado' });
+        res.status(404).json({ message: 'Message not found' });
       }
     } catch (error) {
-      res.status(500).json({ message: 'Error al actualizar el mensaje', error });
+      res.status(500).json({ message: 'Error while updating message', error });
     }
   }
 
@@ -61,12 +61,12 @@ class MessageController {
 
       if (message) {
         await message.destroy();
-        res.status(200).json({ message: 'Mensaje eliminado' });
+        res.status(200).json({ message: 'Message deleted' });
       } else {
-        res.status(404).json({ message: 'Mensaje no encontrado' });
+        res.status(404).json({ message: 'Message not found' });
       }
     } catch (error) {
-      res.status(500).json({ message: 'Error al eliminar el mensaje', error });
+      res.status(500).json({ message: 'Error while deleting message', error });
     }
   }
 }
