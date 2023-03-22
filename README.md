@@ -9,6 +9,7 @@
 ```
 npm install
 ```
+3. The application has JWT validation so it is necessary to register so that when logging in you can obtain a new JWT and thus use the other endpoints
 
 # ✨Enabled endPoints
 ```
