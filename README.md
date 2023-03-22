@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png?20220125121207" width="200" alt="React Logo" /></a>
 </p>
 
 # Run in development
@@ -9,50 +9,27 @@
 ```
 npm install
 ```
-3. Have Nest CLI installed
-```
-npm i -g @nestjs/cli
-```
 
-4. Raise the database
+# ✨Enabled endPoints
 ```
-docker-compose up -d
-```
-
-5. Rebuild the database with Sync
-```
-http://localhost:3000/api/v2/sync
-```
-
-6.✨Enabled endPoints from local environment
-```
-http://localhost:3000/api/v2/sync GET
+http://localhost:3000/auth/login POST: Allows users to log in to the application.
 ```
 ```
-http://localhost:3000/api/v2/pokemon GET
+http://localhost:3000/auth/register POST: Allows users to register for the application.
 ```
 ```
-http://localhost:3000/api/v2/pokemon/{pokemon-id / pokemon-name} GET
+http://localhost:3000/api/messages/:id GET: Retrieves a specific message by its ID.
 ```
 ```
-http://localhost:3000/api/v2/pokemon/type/{pokemon-type} GET
-```
-
-7.✨Enabled endPoints from cloud provider
-```
-http://74.208.182.108:3004/api/v2/sync GET
+http://localhost:3000/api/messages POST: Creates a new message.
 ```
 ```
-http://74.208.182.108:3004/api/v2/pokemon GET
+http://localhost:3000/api/messages/:id PUT: Updates an existing message using its ID.
 ```
 ```
-http://74.208.182.108:3004/api/v2/pokemon/{pokemon-id / pokemon-name} GET
+http://localhost:3000/api/messages/:id DELETE: Deletes an existing message using its ID.
 ```
-```
-http://74.208.182.108:3004/api/v2/pokemon/type/{pokemon-type} GET
-```
-
 ## Stack
-* MongoDB
-* Nest
+* PostgreSQL
+* NodeJS Express
 * Typescript
