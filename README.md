@@ -15,27 +15,8 @@ npm install
 ```
 http://localhost:3000/api-docs/#/
 ```
-
-# ✨Enabled endPoints
-```
-http://localhost:3000/auth/login POST: Allows users to log in to the application.
-```
-```
-http://localhost:3000/auth/register POST: Allows users to register for the application.
-```
-```
-http://localhost:3000/api/messages/:id GET: Retrieves a specific message by its ID.
-```
-```
-http://localhost:3000/api/messages POST: Creates a new message.
-```
-```
-http://localhost:3000/api/messages/:id PUT: Updates an existing message using its ID.
-```
-```
-http://localhost:3000/api/messages/:id DELETE: Deletes an existing message using its ID.
-```
 ## Stack
 * PostgreSQL
+* MongoDB
 * NodeJS Express
 * Typescript
